@@ -8,7 +8,8 @@ RUN apk add --no-cache --virtual .build-deps \
     libtool \
     libxml2-dev \
     postgresql-dev \
-    sqlite-dev
+    sqlite-dev \
+    icu-dev
 
 # Install production dependencies
 RUN apk add --no-cache \
@@ -29,7 +30,8 @@ RUN apk add --no-cache \
     postgresql-libs \
     rsync \
     zlib-dev \
-    libzip-dev
+    libzip-dev \
+    icu-libs
 
 # Install PECL and PEAR extensions
 RUN pecl install \
